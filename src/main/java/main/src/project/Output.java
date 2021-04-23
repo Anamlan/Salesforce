@@ -29,23 +29,9 @@ public class Output {
         } catch (Exception ex) {
             logger.error("error message: " + ex.getMessage());
             logger.fatal("fatal error message: " + ex.getMessage());
-            toFile(data, String.valueOf(OUTPUT));
+
         }
         System.out.println(new StringBuilder().append("output ==> ").append(System.lineSeparator()).
                 append(CheckArray.getInput(String.valueOf(OUTPUT))).toString());
-    }
-
-    public static void toFile(ArrayList<String> data, String fileName) {
-        fileName = fileName.length() == 0 ? "output.txt" : fileName;
-        logger.info("Result to " + fileName);
-        try (Writer writeTo = new FileWriter(fileName, false)) {
-            for (int i = 0; i < data.size(); i++) {
-                writeTo.write(data.get(i));
-            }
-        } catch (IOException ex) {
-            logger.error("error message: " + ex.getMessage());
-            logger.fatal("fatal error message: " + ex.getMessage());
-            ex.printStackTrace();
-        }
     }
 }
