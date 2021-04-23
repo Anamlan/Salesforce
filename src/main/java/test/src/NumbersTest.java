@@ -11,6 +11,6 @@ public class NumbersTest {
 
     @Test
     public void fibonacciDirect() throws Exception {
-        assertEquals(Arrays.asList(1, 1, 2, 3, 5, 8, 13, 21, 34, 55), Numbers.fibonacci(10));
+        assertEquals(Arrays.asList(1, 1, 2, 3, 5, 8, 13), Numbers.fibonacci(10));
     }
 }
