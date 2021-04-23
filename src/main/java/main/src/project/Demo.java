@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import static project.Input.INPUT;
 import static project.Numbers.fibonacci;
-import static project.Numbers.numberOfInteger;
+import static project.Input.numberOfInteger;
 import static project.Output.OUTPUT;
 
 public class Demo {
@@ -16,7 +16,7 @@ public class Demo {
             for (int i = 0; i < args.length; i++) {
                 switch (args[i]) {
                     case "-i":
-                        INPUT = args[i + 1];
+                       // INPUT = args[i + 1];
                         logger.info("Selected input file name: " + INPUT);
                         break;
                     case "-o":

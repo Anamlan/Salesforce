@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Salesforce.iml" filepath="$PROJECT_DIR$/Salesforce.iml" />
-      <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/java/main/main.iml" filepath="$PROJECT_DIR$/src/main/java/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/java/test/test.iml" filepath="$PROJECT_DIR$/src/main/java/test/test.iml" />
     </modules>
   </component>
 </project>

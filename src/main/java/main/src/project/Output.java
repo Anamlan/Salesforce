@@ -14,11 +14,11 @@ public class Output {
     public static final Path OUTPUT = Paths.get("output.txt");
 
     public static void main(String[] args) throws IOException {
-        Reader read = new FileReader(Input.INPUT);
+        Reader read = new FileReader(String.valueOf(Input.INPUT));
         ArrayList<Integer> arrayList = new ArrayList<>();
         ArrayList<String> data = new ArrayList<>();
         try (FileWriter writeTo = new FileWriter(String.valueOf(OUTPUT))){
-            Scanner scan = new Scanner(CheckArray.convertText(Input.INPUT));
+            Scanner scan = new Scanner(CheckArray.convertText(String.valueOf(Input.INPUT)));
             String next = new String();
             for (int i = 0; i < next.length(); i++){
                 next = scan.nextLine();

@@ -8,13 +8,13 @@ import java.util.logging.Logger;
 public interface CheckArray {
 
     static String convertText(String input) throws Exception {
-        String text = null;
+        String text;
         StringBuilder sb = new StringBuilder();
         text = Reverse.outputArray;
-        return text.toString();
+        return text;
     }
 
-    public static String getInput(String fileName) {
+    static String getInput(String fileName) {
         StringBuilder sb = new StringBuilder();
         try {
             Scanner scanner = new Scanner(new File(fileName), "cp1251");

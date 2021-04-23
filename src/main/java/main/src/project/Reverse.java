@@ -1,6 +1,7 @@
 package project;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Reverse {
     static String outputArray = new String();
@@ -11,6 +12,7 @@ public class Reverse {
         stringBuilder.append(arrayList.get(i)).append(" ").append("wor").append("\n");
         }
         outputArray = stringBuilder.toString();
+        Collections.reverse(arrayList);
         return arrayList;
     }
 }
