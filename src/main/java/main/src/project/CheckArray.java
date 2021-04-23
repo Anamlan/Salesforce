@@ -6,7 +6,6 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public interface CheckArray {
-
     static String convertText(String input) throws Exception {
         String text;
         StringBuilder sb = new StringBuilder();
