@@ -3,48 +3,36 @@ package project;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
-
-import static project.CheckArray.convertText;
-import static project.Input.INPUT;
+import java.util.Scanner;
 
 public class Output {
     private static final Logger logger = LogManager.getRootLogger();
-    public static String OUTPUT = "output.txt";
-    public static Writer writeTo;
-
-    {
-        try {
-            writeTo = new FileWriter(OUTPUT);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    public static final Path OUTPUT = Paths.get("output.txt");
 
     public static void main(String[] args) throws IOException {
-       //writeTo.write(String.valueOf(convertText(INPUT)));
-    }
-    public static void output(ArrayList<Integer> arrayList, int numberOfNumbers) throws Exception {
-        StringBuilder adf = new StringBuilder(String.valueOf(convertText(INPUT)));
-        StringBuilder sbOut = new StringBuilder(String.valueOf(convertText(INPUT)));
-        for (int i = 0; i <= numberOfNumbers; i++) {
-            sbOut.append(arrayList);
-            sbOut.append("row");
-            adf = sbOut;
+        Reader read = new FileReader(Input.INPUT);
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        ArrayList<String> data = new ArrayList<>();
+        try (FileWriter writeTo = new FileWriter(String.valueOf(OUTPUT))){
+            Scanner scan = new Scanner(CheckArray.convertText(Input.INPUT));
+            String next = new String();
+            for (int i = 0; i < next.length(); i++){
+                next = scan.nextLine();
+            }
+            writeTo.write(CheckArray.convertText(next));
+        } catch (IOException io) {
+            logger.info("output file" + io);
+        } catch (Exception ex) {
+            logger.error("error message: " + ex.getMessage());
+            logger.fatal("fatal error message: " + ex.getMessage());
+            toFile(data, String.valueOf(OUTPUT));
         }
-        writeTo.write(String.valueOf(adf));
-        //writeTo.write(String.valueOf(reverseOrder(fibonacci(arrayList))));
-    }
-
-    public static ArrayList<Integer> fibonacci(ArrayList<Integer> arrayList) {
-        return Numbers.array;
-    }
-
-    public static void output(String input) throws IOException {
-      //  writeTo.write(Arrays.toString(convertText(INPUT)));
+        System.out.println(new StringBuilder().append("output ==> ").append(System.lineSeparator()).
+                append(CheckArray.getInput(String.valueOf(OUTPUT))).toString());
     }
 
     public static void toFile(ArrayList<String> data, String fileName) {

@@ -113,7 +113,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../bmaennwm-task4/part2_sorted.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../fibonacci/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../fibonacci/src/main/java/fileWork/WriteToFile.java">
           <value>
             <set />
           </value>

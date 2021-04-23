@@ -1,28 +1,31 @@
 package project;
 
-import java.io.FileReader;
-import java.io.Reader;
-import java.util.ArrayList;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
-
-import static project.Input.INPUT;
+import java.util.logging.Logger;
 
 public interface CheckArray {
 
-    public static void main(String[] args) throws Exception {
-        System.out.println(String.valueOf(convertText(INPUT)));
-    }
     static String convertText(String input) throws Exception {
         String text = null;
-        Reader read = new FileReader("source.txt");
-        ArrayList scan = Numbers.array;
-        Scanner scan1 = new Scanner(read);
         StringBuilder sb = new StringBuilder();
-        while (scan1.hasNextLine()) {
-            scan1.skip("([a-zA-Z])");
-            text = scan1.nextLine();
-            sb.append(text).append(scan).append(System.lineSeparator());
-        }return sb.toString();
+        text = Reverse.outputArray;
+        return text.toString();
+    }
 
+    public static String getInput(String fileName) {
+        StringBuilder sb = new StringBuilder();
+        try {
+            Scanner scanner = new Scanner(new File(fileName), "cp1251");
+            while (scanner.hasNextLine()) {
+                sb.append(scanner.nextLine()).append(System.lineSeparator());
+            }
+            scanner.close();
+            return sb.toString().trim();
+        } catch (IOException ex) {
+            Logger.getLogger("Exception : " + ex);
+        }
+        return sb.toString();
     }
 }
