@@ -13,7 +13,7 @@ public class Output {
     private static final Logger logger = LogManager.getRootLogger();
     public static final Path OUTPUT = Paths.get("output.txt");
 
-    public static void main(String... args) {
+    public static void main(String args) {
         try (FileWriter writeTo = new FileWriter(String.valueOf(OUTPUT))){
             Scanner scan = new Scanner(CheckArray.convertText(String.valueOf(Input.INPUT)));
             String next = "";

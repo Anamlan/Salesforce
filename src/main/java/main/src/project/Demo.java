@@ -10,7 +10,6 @@ import static project.Input.countInt;
 import static project.Numbers.countFib;
 import static project.Numbers.fibonacci;
 import static project.Output.OUTPUT;
-import static project.Reverse.*;
 
 public class Demo {
     private static final Logger logger = LogManager.getRootLogger();
@@ -43,6 +42,5 @@ public class Demo {
     public static void start1() throws IOException {
         fibonacci(countInt());
         Reverse.reverseFibonacci(fibonacci(countFib), countFib);
-        reverse(stringList2);
     }
 }
