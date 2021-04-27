@@ -6,10 +6,9 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 public class Reverse {
     private static final Logger logger = LogManager.getRootLogger();
@@ -43,38 +42,6 @@ public class Reverse {
         for (String part : inputWord) {
             stringList.add(part);
         }
-        stringList = stringList.stream()
-                .sorted(Comparator.reverseOrder())
-                .collect(Collectors.toList());
-        System.out.println(stringList);
         return stringList;
-    }
-
-    static List<String> reverseStringByWords(List<String> stringList) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int j = stringList.size()-1; j >= 0; j--) {
-            stringBuilder.append(stringList.get(j)).append(' ').append("\n");
-        }
-        for (Object part : stringList) {
-            stringBuilder.reverse().toString();
-        }
-        return Arrays.asList(stringBuilder.toString());
-    }
-    public static <T> Stream<T> getReverseStream(List<T> list) {
-        final ListIterator<T> listIt = list.listIterator(list.size());
-        final Iterator<T> reverseIterator = new Iterator<T>() {
-            @Override
-            public boolean hasNext() {
-                return listIt.hasPrevious();
-            }
-
-            @Override
-            public T next() {
-                return listIt.previous();
-            }
-        };
-        return StreamSupport.stream(Spliterators.spliteratorUnknownSize(
-                reverseIterator,
-                Spliterator.ORDERED | Spliterator.IMMUTABLE), false);
     }
 }

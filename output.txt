@@ -1,6 +1,6 @@
-13 gwor
-8 hwor
-5 kwor
-3 lwor
-2 mwor
-1 nwor
+13 wor
+8 wor
+5 wor
+3 wor
+2 wor
+1 wor
