@@ -1,15 +1,16 @@
 package project;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static project.Input.newList;
 
 public class Numbers {
 
-    static ArrayList<Integer> array = new ArrayList<>();
+    static List<Integer> array = new ArrayList<>();
     static int countFib;
 
-    public static ArrayList<Integer> fibonacci(int inputNumbers) {
+    public static List<Integer> fibonacci(int inputNumbers) {
         int sum = 1;
         int firstElement = 0;
         int secondElement = 1;
