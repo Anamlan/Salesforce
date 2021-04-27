@@ -3,9 +3,11 @@ package project;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static project.Input.INPUT;
+import java.io.IOException;
+
+import static project.Input.*;
+import static project.Numbers.countFib;
 import static project.Numbers.fibonacci;
-import static project.Input.numberOfInteger;
 import static project.Output.OUTPUT;
 
 public class Demo {
@@ -13,18 +15,16 @@ public class Demo {
 
     public static void main(String[] args) throws Exception {
         if (args.length > 0)
-            for (int i = 0; i < args.length; i++) {
-                switch (args[i]) {
+            for (String arg : args) {
+                switch (arg) {
                     case "-i":
-                       // INPUT = args[i + 1];
                         logger.info("Selected input file name: " + INPUT);
                         break;
                     case "-o":
-                        //OUTPUT = i;
                         logger.info("Selected output file name: " + OUTPUT);
                         break;
                     default:
-                        throw new IllegalStateException("Unexpected value: " + args[i]);
+                        throw new IllegalStateException("Unexpected value: " + arg);
                 }
             }
         else {
@@ -35,11 +35,11 @@ public class Demo {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Output.main(args);
+        Output.main(String.valueOf(OUTPUT));
     }
 
-    public static void start1() throws Exception{
-        fibonacci(numberOfInteger);
-        Reverse.reverseFibonacci(fibonacci(numberOfInteger), numberOfInteger);
+    public static void start1() throws IOException {
+        fibonacci(countInt());
+        Reverse.reverseFibonacci(fibonacci(countFib), countFib);
     }
 }

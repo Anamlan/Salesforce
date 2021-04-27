@@ -3,23 +3,20 @@ package project;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Output {
     private static final Logger logger = LogManager.getRootLogger();
     public static final Path OUTPUT = Paths.get("output.txt");
 
-    public static void main(String[] args) throws IOException {
-        Reader read = new FileReader(String.valueOf(Input.INPUT));
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        ArrayList<String> data = new ArrayList<>();
+    public static void main(String... args) {
         try (FileWriter writeTo = new FileWriter(String.valueOf(OUTPUT))){
             Scanner scan = new Scanner(CheckArray.convertText(String.valueOf(Input.INPUT)));
-            String next = new String();
+            String next = "";
             for (int i = 0; i < next.length(); i++){
                 next = scan.nextLine();
             }
