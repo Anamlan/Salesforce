@@ -42,5 +42,6 @@ public class Demo {
     public static void start1() throws IOException {
         fibonacci(countInt());
         Reverse.reverseFibonacci(fibonacci(countFib), countFib);
+        Reverse.countFibonacci(fibonacci(countFib), countFib);
     }
 }
