@@ -14,7 +14,7 @@ public class Reverse {
     static String outputArray = null;
 
 
-    public static String reverseFibonacci(List<Integer> array, int inputNumbers) throws IOException {
+    public static String reverseFibonacci(List<Integer> array, int count) throws IOException {
         StringBuilder stringBuilder = new StringBuilder();
         convertText(stringList);
         for (int i = 1; array.size() > i; i++){

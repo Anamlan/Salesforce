@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public interface CheckArray {
-    static String convertText(String input) {
+    static String outputText(String input) {
         String text;
         text = Reverse.outputArray;
         return text;

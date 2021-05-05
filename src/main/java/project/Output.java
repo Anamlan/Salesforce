@@ -15,12 +15,12 @@ public class Output {
 
     public static void main(String args) {
         try (FileWriter writeTo = new FileWriter(String.valueOf(OUTPUT))){
-            Scanner scan = new Scanner(CheckArray.convertText(String.valueOf(Input.INPUT)));
+            Scanner scan = new Scanner(CheckArray.outputText(String.valueOf(Input.INPUT)));
             String next = "";
             for (int i = 0; i < next.length(); i++){
                 next = scan.nextLine();
             }
-            writeTo.write(CheckArray.convertText(next));
+            writeTo.write(CheckArray.outputText(next));
         } catch (IOException io) {
             logger.info("output file" + io);
         } catch (Exception ex) {
