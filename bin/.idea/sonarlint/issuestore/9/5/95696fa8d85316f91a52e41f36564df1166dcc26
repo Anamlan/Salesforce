@@ -1,0 +1,9 @@
+
+Z
+java:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(õ§ÎÝ
+*
+java:S1700"Rename field "INPUT"(©ÝñÒ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(¾ìÆ”üÿÿÿÿ
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(——±Ëùÿÿÿÿ

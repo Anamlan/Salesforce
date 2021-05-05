@@ -1,0 +1,18 @@
+
+`
+java:S2095"EUse try-with-resources or close this "Scanner" in a "finally" clause.(­Ë¿åıÿÿÿÿ
+0
+java:S1700"Rename field "OUTPUT"(ô‰½üıÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ï‰Ü
+F
+java:S1172"+Remove this unused method parameter "args".(×­Éêşÿÿÿÿ
+W
+java:S3457"AFormat specifiers should be used instead of string concatenation.(®ğê„
+V	java:S125"<This block of commented-out lines of code should be removed.(ü¨ßûÿÿÿÿ
+\
+java:S3457"AFormat specifiers should be used instead of string concatenation.(òÖş­ûÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ì‘òŠ
+W
+java:S3457 "AFormat specifiers should be used instead of string concatenation.(ôôÔÁ
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(í¿ëñÿÿÿÿÿ
