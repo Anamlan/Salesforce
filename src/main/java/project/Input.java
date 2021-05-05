@@ -18,9 +18,10 @@ public class Input {
         inputFromFile = inputFromFile.stream().map(s -> s.replaceAll("\\D+", ""))
                 .collect(Collectors.toList());
 
-        newList = new ArrayList<Integer>(inputFromFile.size()) ;
+        newList = new ArrayList<>(inputFromFile.size()) ;
         for (String myInt : inputFromFile){
             newList.add(Integer.valueOf(myInt));
+            count++;
         }
         return count;
     }

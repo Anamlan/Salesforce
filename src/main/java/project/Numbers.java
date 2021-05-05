@@ -10,7 +10,7 @@ public class Numbers {
     static List<Integer> array = new ArrayList<>();
     static int countFib;
 
-    public static List<Integer> fibonacci(int inputNumbers) {
+    public static List<Integer> fibonacci(int count) {
         int sum = 1;
         int firstElement = 0;
         int secondElement = 1;

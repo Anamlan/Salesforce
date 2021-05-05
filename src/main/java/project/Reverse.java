@@ -37,7 +37,7 @@ public class Reverse {
                 .reverse()
                 .toString())
                  .collect(Collectors.toList());
-        stringList = new ArrayList<String>(inputWord.size());
+        stringList = new ArrayList<>(inputWord.size());
 
         for (String part : inputWord) {
             stringList.add(part);
@@ -46,7 +46,7 @@ public class Reverse {
 
     }
 
-    static String countFibonacci(List<Integer> array, int inputNumbers) {
+    static String countFibonacci(List<Integer> array, int count) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 1; array.size() > i; i++){
             stringBuilder.append(inputWordBeforeReverse.get(i)).append(" ")

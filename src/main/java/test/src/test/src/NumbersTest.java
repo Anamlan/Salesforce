@@ -1,3 +1,5 @@
+package test.src;
+
 import org.junit.Test;
 import project.Numbers;
 

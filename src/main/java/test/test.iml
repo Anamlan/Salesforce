@@ -18,5 +18,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="main" />
+    <orderEntry type="module" module-name="Salesforce" />
   </component>
 </module>
